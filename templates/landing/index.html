@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+    {% block title %} Timestamps {% endblock %}
+
+    {% block content %}
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+            <br><br>
+                <h1 class="header center indigo-text text-darken-4">Timestamps</h1>
+                <form action="{% url 'landing:difference' %}" method="POST">
+                <div class="row center">
+                    <div class="input-field col s6">
+                    <input placeholder="Day dd Mon yyyy hh:mm:ss +xxxx" id="first_name" type="text" class="validate">
+                    <label for="first_name">First Timestamp</label>
+                </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Day dd Mon yyyy hh:mm:ss +xxxx" id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Timespamp</label>
+                    </div>
+                </div>
+                <div class="row center">
+                    <button class="btn-large waves-effect waves-light orange" type="submit" name="action">Submit
+                         <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <br><br>
+                </form>
+            </div>
+        </div>
+    {% endblock %}
